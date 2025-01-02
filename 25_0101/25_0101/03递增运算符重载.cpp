@@ -13,13 +13,13 @@ public:
 	
 	person& operator++()				// 前置++
 	{
-		person temp;
-		temp.m_A++;
 
-		return temp;
+		m_A++;
+
+		return *this;
 	}
 
-	person& operator++(int)				// 后置++
+	person operator++(int)				// 后置++		int为占位参数区分前置++和后置++
 	{
 		person temp;
 		temp = *this;
@@ -36,19 +36,20 @@ private:
 
 ostream& operator<<(ostream& cout, person p)
 {
-	cout << p.m_A << endl;
+	cout << p.m_A ;
 	return cout;
 }
 
 
-int main()
+int main3()
 {
 	person p;
-	operator<<(cout, p);
 	
+	cout << ++(++p) << endl;							// 前置返回的是引用，后置返回的是值
 
-	cout << p++ << endl;
-	cout << ++p << endl;
+	cout << (p++)++ << endl;
+
+
 
 	return 0;
 }

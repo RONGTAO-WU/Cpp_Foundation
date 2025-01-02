@@ -31,7 +31,7 @@ ostream& operator<<(ostream& cout, person& p)						// 左移运算符用来打印一个类的
 }																	// 不能在类中定义成员函数，因为这样的话就变为p cout的顺序了
 
 
-int main1()
+int main2()
 {
 	person p;
 	p.set(10, 10);

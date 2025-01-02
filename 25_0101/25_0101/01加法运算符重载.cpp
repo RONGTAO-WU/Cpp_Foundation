@@ -39,7 +39,7 @@ person operator-(person& p, int num)						// ÔËËã·ûÖØÔØÒ²¿ÉÒÔ½øĞĞº¯ÊıÖØÔØ£¬ÕâÀïÎ
 	return ret;
 }
 
-int main0()
+int main1()
 {
 
 	person p1;
